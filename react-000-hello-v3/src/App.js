@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import Button from "./comps/Button";
 import Box from "./comps/Box";
 import Section from "./comps/Section";
+import Article from "./comps/Article";
 
 function App() {
   const buttonStyle = {
@@ -27,6 +28,7 @@ function App() {
         </Button>
         <Box />
       </Section>
+      <Article theme="yellow"></Article>
     </div>
   );
 }
