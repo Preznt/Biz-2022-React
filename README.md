@@ -16,8 +16,8 @@ st_name = "이몽룡"
 
 ```
 const [변수명, set변수명]= useState("초기값")
-const [객체, set객체명] = useState({속성1: 값, 속성2: 값})
-const [배열, 상태함수]= useState([12,3,3,4,5,6,7,8])
+const [객체변수명, set객체명] = useState({속성1: 값, 속성2: 값})
+const [배열변수명, 상태함수]= useState([12,3,3,4,5,6,7,8])
 ```
 
 ### React 의 상태변수 변경

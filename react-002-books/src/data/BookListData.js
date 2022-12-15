@@ -11,9 +11,9 @@ const BookListData = [
 ];
 
 const BookData = {
-  b_isbn,
-  b_title,
-  b_author,
+  b_isbn: "",
+  b_title: "임의 도서명",
+  b_author: "",
 };
 
 /**
