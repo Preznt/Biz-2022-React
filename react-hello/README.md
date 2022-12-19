@@ -42,3 +42,10 @@ touch .babelrc
 ```
 
 npm install react-dom
+
+### 집에서 처음 react 실행
+
+`npx create-react-app .`
+
+- 폴더 안에 node_modules 없을때
+  `yarn install`

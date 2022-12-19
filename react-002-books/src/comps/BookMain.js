@@ -35,6 +35,7 @@ const BookMain = () => {
         b_author: "me",
       },
     ]);
+    console.log(bookListData);
   };
 
   useEffect(() => {
@@ -59,6 +60,11 @@ const BookMain = () => {
   return (
     <div className="Book">
       <div>{bookData.b_title}</div>
+      <BookInput
+        bookData={bookData}
+        setBookData={setBookData}
+        bookListInsert={bookListInsert}
+      />
       <BookList bookListData={bookListData} />
       <div>
         <button onClick={() => modalOpenToggle("input")}>입력창</button>
