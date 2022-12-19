@@ -1,0 +1,74 @@
+.todo .container {
+  border-bottom: 2px solid #acb4f9;
+  margin-bottom: 15px;
+}
+
+.todo .container input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 10px;
+  padding: 4px 12px;
+  width: 50%;
+  height: 25px;
+  outline: none;
+  text-align: center;
+}
+
+.todo .container button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 0.5em;
+  font-weight: 900;
+}
+
+.todo .container button:hover {
+  cursor: pointer;
+  background-color: #cfd3f7;
+}
+
+/* 테이블 */
+.todo .table {
+  display: flex;
+  flex: 1;
+}
+
+.todo .table tbody {
+  flex: 1;
+}
+
+.todo .table tr {
+  display: grid;
+  grid-template-columns: 0.7fr 4fr 0.7fr;
+}
+
+.todo .table td.delete {
+  cursor: pointer;
+  font-size: 22px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.todo .table td.delete:hover {
+  opacity: 1;
+}
+
+.todo .table tr td.checkbox {
+  display: none;
+}
+
+.todo .table tr.check td.checkbox {
+  padding-top: 5px;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.todo .table td {
+  padding: 5px 10px;
+  user-select: none;
+  text-align: center;
+}
+
+.todo .table td.line {
+  text-decoration: line-through;
+  color: gray;
+}
