@@ -29,7 +29,7 @@ const TodoInput = (props) => {
   return (
     <div className="container">
       <input
-        placeholder="오늘 할일을 입력해주세요"
+        placeholder="오늘 할 일을 입력해주세요"
         onChange={todoInputChange}
         onKeyDown={todokeyDownHandler}
       />

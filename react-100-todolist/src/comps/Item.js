@@ -4,7 +4,7 @@ const item = (props) => {
   const deleteHandler = (e) => {
     const tr = e.target.closest("TR");
     const todoId = tr.dataset.id;
-    if (window.confirm(`할일을 삭제할까요?`)) {
+    if (window.confirm(`할 일을 삭제할까요?`)) {
       deleteTodo(todoId);
     }
   };
