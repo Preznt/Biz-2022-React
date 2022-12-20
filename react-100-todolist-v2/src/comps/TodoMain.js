@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { InitData } from "../data/initData";
+import { TodoData } from "../data/SampleData";
 import moment from "moment";
 import TodoList from "./TodoList";
 import TodoInput from "./TodoInput";
@@ -8,18 +9,26 @@ import "../css/Todo.css";
 const TodoMain = () => {
   const [todoContentList, setTodoContentList] = useState([]);
 
-  const todoInsert = useCallback((t_content) => {
-    // 데이터를 추가하는 곳
-    const data = { ...InitData(), t_content };
-    setTodoContentList([...todoContentList, data]);
-  });
+  // useCallback(()=>{},[매개변수들])
+  const todoInsert = useCallback(
+    (t_content) => {
+      // 데이터를 추가하는 곳
+      const data = { ...InitData(), t_content };
+      // const data = { ...TodoData, t_content };
+      setTodoContentList([...todoContentList, data]);
+    },
+    [setTodoContentList, todoContentList]
+  );
 
-  const todoDelete = useCallback((uid) => {
-    const removeList = todoContentList.filter((item) => {
-      return item.id !== uid;
-    });
-    setTodoContentList(removeList);
-  });
+  const todoDelete = useCallback(
+    (uid) => {
+      const removeList = todoContentList.filter((item) => {
+        return item.id !== uid;
+      });
+      setTodoContentList(removeList);
+    },
+    [setTodoContentList, todoContentList]
+  );
 
   const todoComplete = useCallback((uid) => {
     const completeList = todoContentList.map((item) => {
