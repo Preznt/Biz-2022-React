@@ -1,6 +1,7 @@
 import { CiSearch } from "react-icons/ci";
-const BookInput = (props) => {
-  const { bookSearch } = props;
+import { useBookContext } from "../context/BookContext";
+const BookInput = () => {
+  const { bookSearch } = useBookContext();
 
   const onKeyDownHandler = (e) => {
     const keyCode = e.keyCode;

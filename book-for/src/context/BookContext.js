@@ -1,6 +1,11 @@
 import { createContext, useContext } from "react";
+import { kakaoSearch } from "../modules/kakaoBookFetch";
 
 const BookContext = createContext();
+
+const useBookContext = () => {
+  return useContext(BookContext);
+};
 
 const BookContextProvider = ({ children }) => {
   const getBooks = async (search) => {
@@ -23,9 +28,10 @@ const BookContextProvider = ({ children }) => {
 
   const props = {
     bookSearch,
+    getBooks,
   };
 
-  return <BookContext.Provider>{children}</BookContext.Provider>;
+  return <BookContext.Provider value={props}>{children}</BookContext.Provider>;
 };
 
-export default { BookContextProvider };
+export { BookContextProvider, useBookContext };

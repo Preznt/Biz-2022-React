@@ -2,22 +2,21 @@ import BookInput from "./BookInput";
 import BookNav from "./BookNav";
 import BookContent from "./BookContent";
 import BookHeader from "./BookHeader";
-import BookRegister from "./BookRegister";
 import "../css/Main.css";
-import { kakaoSearch } from "../modules/kakaoBookFetch";
+import { BookContextProvider } from "../context/BookContext";
 
 const BookMain = () => {
   return (
-    <div className="Main">
-      <BookHeader />
-      <div className="article">
-        <BookNav />
-        {/* <BookInput bookSearch={bookSearch} /> */}
-        {/* <BookContent/> */}
-        <BookRegister />
+    <BookContextProvider>
+      <div className="Main">
+        <BookHeader />
+        <div className="article">
+          <BookNav />
+          <BookContent />
+        </div>
+        <button className="register">책 등록하기</button>
       </div>
-      <button className="register">책 등록하기</button>
-    </div>
+    </BookContextProvider>
   );
 };
 
