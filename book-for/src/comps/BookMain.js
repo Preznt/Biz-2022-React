@@ -1,4 +1,7 @@
 import BookInput from "./BookInput";
+import BookNav from "./BookNav";
+import BookContent from "./BookContent";
+import "../css/Main.css";
 import { kakaoSearch } from "../modules/kakaoBookFetch";
 
 const BookMain = () => {
@@ -19,7 +22,13 @@ const BookMain = () => {
   const bookSearch = (search) => {
     getBooks(search);
   };
-  return <BookInput bookSearch={bookSearch} />;
+  return (
+    <div className="Main">
+      <BookNav />
+      {/* <BookInput bookSearch={bookSearch} /> */}
+      <BookContent />
+    </div>
+  );
 };
 
 export default BookMain;

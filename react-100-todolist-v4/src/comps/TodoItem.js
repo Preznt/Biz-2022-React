@@ -1,6 +1,8 @@
+import { useTodoContext } from "../context/TodoContext";
 import { useCallback } from "react";
 
-const TodoItem = ({ Item, todoDelete, todoComplete, todoEditor }) => {
+const TodoItem = ({ Item }) => {
+  const { todoDelete, todoComplete, todoEditor } = useTodoContext();
   const deleteHandler = useCallback(
     (e) => {
       const target = e.target;

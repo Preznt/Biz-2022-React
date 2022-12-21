@@ -2,9 +2,12 @@ const BookNav = () => {
   return (
     <nav>
       <ul>
-        <li></li>
-        <li></li>
+        <li>Book For</li>
+        <li>Home</li>
+        <li>정리함</li>
       </ul>
     </nav>
   );
 };
+
+export default BookNav;

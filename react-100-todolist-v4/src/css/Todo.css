@@ -23,6 +23,12 @@
   border-radius: 10px;
 }
 
+.Todo .input button:disabled {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
 .Todo .input button:hover {
   background-color: #ddd;
   color: black;
