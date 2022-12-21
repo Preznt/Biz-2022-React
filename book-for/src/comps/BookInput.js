@@ -1,3 +1,4 @@
+import { CiSearch } from "react-icons/ci";
 const BookInput = (props) => {
   const { bookSearch } = props;
 
@@ -9,7 +10,12 @@ const BookInput = (props) => {
     }
   };
 
-  return <input placeholder="도서 이름 입력" onKeyDown={onKeyDownHandler} />;
+  return (
+    <>
+      <input placeholder="도서 이름 입력" onKeyDown={onKeyDownHandler} />
+      <CiSearch className="search" />
+    </>
+  );
 };
 
 export default BookInput;

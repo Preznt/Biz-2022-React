@@ -1,32 +1,22 @@
 import BookInput from "./BookInput";
 import BookNav from "./BookNav";
 import BookContent from "./BookContent";
+import BookHeader from "./BookHeader";
+import BookRegister from "./BookRegister";
 import "../css/Main.css";
 import { kakaoSearch } from "../modules/kakaoBookFetch";
 
 const BookMain = () => {
-  const getBooks = async (search) => {
-    try {
-      const params = {
-        query: search,
-        size: 45,
-        target: "title",
-      };
-      const result = await kakaoSearch(params);
-      console.log(result);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const bookSearch = (search) => {
-    getBooks(search);
-  };
   return (
     <div className="Main">
-      <BookNav />
-      {/* <BookInput bookSearch={bookSearch} /> */}
-      <BookContent />
+      <BookHeader />
+      <div className="article">
+        <BookNav />
+        {/* <BookInput bookSearch={bookSearch} /> */}
+        {/* <BookContent/> */}
+        <BookRegister />
+      </div>
+      <button className="register">책 등록하기</button>
     </div>
   );
 };
