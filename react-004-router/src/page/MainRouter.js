@@ -27,6 +27,7 @@ const MainRouter = () => {
         {/* 이게 바로 Outlet부분 include 하는 방법? */}
         <Route path="login" element={<UserLogin />}></Route>
         <Route path="join" element={<UserJoin />}></Route>
+        <Route path="profile/:username" element={<UserJoin />}></Route>
       </Route>
 
       {/* 위에서 요청을 했는데 없을때 */}
