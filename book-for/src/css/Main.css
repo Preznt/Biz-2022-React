@@ -12,7 +12,7 @@
   outline: none;
   padding: 8px 12px;
   margin-left: auto;
-  width: 30%;
+  width: 70%;
   border-radius: 1em;
   border: 1px solid #aaa;
 }
@@ -49,4 +49,34 @@
 
 .Main nav ul {
   list-style: none;
+}
+
+/* searchbox */
+
+.searchbox {
+}
+
+.searchdata {
+  display: flex;
+  /* width: 70%; */
+  justify-content: center;
+  margin: 7px 0;
+}
+
+.searchdata img {
+  width: 70px;
+  height: 100px;
+  border: 1px solid rgb(138, 138, 138);
+}
+
+.searchdata .detail {
+  margin-left: 15px;
+  width: 50%;
+  text-align: left;
+}
+
+.searchdata .detail .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
