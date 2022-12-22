@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState, useCallback } from "react";
 import { kakaoSearch } from "../modules/kakaoBookFetch";
 
 const BookContext = createContext();
@@ -8,26 +8,30 @@ const useBookContext = () => {
 };
 
 const BookContextProvider = ({ children }) => {
-  const getBooks = async (search) => {
+  const [kakaoDataList, setKakaoDataList] = useState([]);
+
+  const getBooks = useCallback(async (search) => {
     try {
       const params = {
         query: search,
-        size: 10,
+        size: 5,
         target: "title",
       };
       const result = await kakaoSearch(params);
-      console.log(result);
+      // console.log(result.data);
+      return result.data;
     } catch (err) {
       console.log(err);
     }
-  };
+  }, []);
 
   const bookSearch = (search) => {
-    getBooks(search);
+    return getBooks(search);
   };
 
   const props = {
     bookSearch,
+    getBooks,
   };
 
   return <BookContext.Provider value={props}>{children}</BookContext.Provider>;
