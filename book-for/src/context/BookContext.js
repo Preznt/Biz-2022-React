@@ -12,7 +12,7 @@ const BookContextProvider = ({ children }) => {
     try {
       const params = {
         query: search,
-        size: 45,
+        size: 10,
         target: "title",
       };
       const result = await kakaoSearch(params);
@@ -28,7 +28,6 @@ const BookContextProvider = ({ children }) => {
 
   const props = {
     bookSearch,
-    getBooks,
   };
 
   return <BookContext.Provider value={props}>{children}</BookContext.Provider>;

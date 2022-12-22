@@ -1,3 +1,20 @@
+/* 공통 부분 */
+.Main button {
+  border: none;
+}
+
+.Main button:hover {
+  cursor: pointer;
+}
+
+/* 메인부분 */
+
+.Main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
 .Main header {
   display: flex;
   align-items: center;
@@ -24,20 +41,18 @@
 
 .Main header button {
   margin: 10px;
-  border: none;
   font-size: 15px;
   background-color: transparent;
-}
-
-.Main header button:hover {
-  cursor: pointer;
 }
 
 .Main header button:nth-of-type(1) {
   margin-left: auto;
 }
 
+/* article 부분 */
+
 .Main .article {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
@@ -49,4 +64,18 @@
 
 .Main nav ul {
   list-style: none;
+}
+
+.Main button.register {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  width: 20%;
+  padding: 10px 14px;
+  border-radius: 1em;
+  background-color: #9c66e1;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px black;
+  color: white;
 }

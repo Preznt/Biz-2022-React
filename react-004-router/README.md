@@ -3,7 +3,7 @@
 - React 에서 Routing,Nav, URL을 처리하는 방법에는 `react-router`, `React Page`, `nextJS`등이 있다.
 - `React Page`, `nextJS` 는 기본 react project 와 달리 완전한 Framework를
   사용하는 방법 : project 를 생성하는 방법 자체가 다르다.
-- `react-router`를 사용방법은, 기존의 `create-react-app`으로 생성한
+- `react-router`의 사용방법은, 기존의 `create-react-app`으로 생성한
   프로젝트의 기본 구조를 변경하지 않고 작성할수 있는 방법
 
 ## dependency

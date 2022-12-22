@@ -1,9 +1,9 @@
 import BookInput from "./BookInput";
 import BookNav from "./BookNav";
-import BookContent from "./BookContent";
 import BookHeader from "./BookHeader";
 import "../css/Main.css";
 import { BookContextProvider } from "../context/BookContext";
+import { Outlet } from "react-router-dom";
 
 const BookMain = () => {
   return (
@@ -12,7 +12,7 @@ const BookMain = () => {
         <BookHeader />
         <div className="article">
           <BookNav />
-          <BookContent />
+          <Outlet />
         </div>
         <button className="register">책 등록하기</button>
       </div>
