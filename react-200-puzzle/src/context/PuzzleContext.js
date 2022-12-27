@@ -21,6 +21,7 @@ const PuzzleContextProvider = ({ children }) => {
       .map((_, index) => {
         const pieceInfo = {
           posX: ((index + 1) % piece) * -100,
+          posY: 0,
         };
         return pieceInfo;
       });
