@@ -1,25 +1,4 @@
-div.Modal.close {
-  display: none;
-}
-
-div.Modal.open {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 30%;
-  left: 20%;
-  right: 20%;
-  bottom: 10%;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-div.Modal img {
-  width: 140px;
-  height: 200px;
-}
-
 div.detail {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 }
