@@ -34,6 +34,11 @@ const setLogin = async (loginUser) => {
 
 // export default { getLoginUser };
 
+export const logout = async () => {
+  if (window?.confirm("로그아웃을 할까요?"))
+    return await fetch("/api/user/logout");
+};
+
 const Author = { getLoginUser, setLogin };
 export default Author;
 // export default Author = { getLoginUser };
