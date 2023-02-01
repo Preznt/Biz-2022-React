@@ -34,7 +34,7 @@ const UserJoin = () => {
       />
       <input
         name="re_password"
-        value={loginUser.password}
+        value={loginUser.re_password}
         onChange={onChangeHandler}
         placeholder="비밀번호확인"
         className="w3-input"
