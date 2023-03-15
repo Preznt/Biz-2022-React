@@ -31,6 +31,7 @@ const TodoInput = () => {
         <TextField
           fullWidth
           variant="outlined"
+          label="TODO 입력 후 Enter"
           placeholder="할일 입력 한 후 Enter..."
           value={content}
           onChange={onChangeHandler}
